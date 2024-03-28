@@ -1,7 +1,9 @@
+import {Navbar} from "./components/Navbar.jsx"
+
 function App(){
 
   return (
-    <h1>hola que tal</h1>
+    <h1>Soy un navbar</h1>
   )
 }
 
