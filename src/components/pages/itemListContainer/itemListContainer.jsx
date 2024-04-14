@@ -1,6 +1,6 @@
-import "../itemListContainer/itemListContainer.css";
+import { ProductCard } from "../../common/productCard/ProductCard";
 
-export const itemListContainer = () => {
+export const ItemListContainer = () => {
   return (
     <div
       style={{
@@ -12,21 +12,23 @@ export const itemListContainer = () => {
     >
       <h1>Bienvenidos a mi ecommerce</h1>
 
-      <div>
-        <h3>Titulo 1</h3>
-        <h4>Descripcion</h4>
-        <h4>Precio 1</h4>
-      </div>
-      <div>
-        <h3>Titulo 2</h3>
-        <h4>Descripcion</h4>
-        <h4>Precio 2</h4>
-      </div>
-      <div>
-        <h3>Titulo 3</h3>
-        <h4>Descripcion</h4>
-        <h4>Precio 3</h4>
-      </div>
+      <ProductCard
+        precio={100}
+        titulo={"Titulo 1"}
+        descripcion={"descripcion 1"}
+      />
+
+      <ProductCard
+        precio={200}
+        titulo={"Titulo 2"}
+        descripcion={"descripcion 2"}
+      />
+
+      <ProductCard
+        precio={300}
+        titulo={"Titulo 2"}
+        descripcion={"descripcion 2"}
+      />
     </div>
   );
 };

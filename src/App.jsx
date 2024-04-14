@@ -1,14 +1,16 @@
+import { useState } from "react";
 import { Footer } from "./components/layout/footer/Footer.jsx";
-import { Home } from "./components/pages/home/Home.jsx";
 import { Navbar } from "./components/layout/navbar/Navbar.jsx";
-import { itemListContainer } from "./components/pages/itemListContainer/itemListContainer.jsx";
+import { Counter } from "./components/common/counter/Counter.jsx";
+import { ItemListContainer } from "./components/pages/itemListContainer/itemListContainer.jsx";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Home />
-      <itemListContainer />
+      <Navbar>
+        <ItemListContainer />
+        <Counter />
+      </Navbar>
       <Footer />
     </div>
   );
