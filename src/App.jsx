@@ -1,18 +1,12 @@
-import { Footer } from "./components/layout/footer/Footer.jsx";
-import { Navbar } from "./components/layout/navbar/Navbar.jsx";
-import { CounterContainer } from "./components/common/counter/CounterPresentacional.jsx";
-import { ItemListContainer } from "./components/pages/itemListContainer/itemListContainer.jsx";
-import CartContainer from "./components/pages/cart/CartContainer.jsx";
+import { Layout } from "./components/layout/Layout.jsx";
+import ItemListContainer from "./components/pages/itemListContainer/itemListContainer.jsx";
 
 function App() {
   return (
     <div>
-      <Navbar>
+      <Layout>
         <ItemListContainer />
-        <CartContainer />
-      </Navbar>
-      <CounterContainer />
-      <Footer />
+      </Layout>
     </div>
   );
 }

@@ -1,5 +1,6 @@
-  const CounterPresentacional = ({restar, sumar, contador, setNombre}){
+import { CounterContainer } from "./CounterContainer";
 
+export const CounterPresentacional = () => {
   return (
     <div>
       <button onClick={restar}>restar</button>
@@ -8,5 +9,3 @@
     </div>
   );
 };
-
-export default CounterPresentacional;

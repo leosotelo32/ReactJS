@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { useEffect } from "react";
-import CounterPresentacional from "./CounterPresentacional";
-import { ItemListContainer } from "../../pages/itemListContainer/itemListContainer";
 
 export const CounterContainer = () => {
   //Hook del contador
@@ -10,11 +8,9 @@ export const CounterContainer = () => {
 
   //Array de dependencias
 
-  const [nombre, setNombre] = useState("pepe");
-
   useEffect(() => {
     console.log("me ejecuto dentro del effect");
-  }, [nombre]);
+  }, [contador]);
 
   const sumar = () => {
     setContador(contador + 1);
@@ -27,8 +23,6 @@ export const CounterContainer = () => {
       alert("no podes menos de 1");
     }
   };
-
-  console.log(nombre);
 
   return (
     <CounterPresentacional

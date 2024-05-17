@@ -1,19 +1,21 @@
-import { IoCartOutline } from "react-icons/io5";
-
-export const Navbar = ({ children }) => {
+import CartWidget from "../../common/cartWidget/CartWidget.jsx";
+import "./Navbar.css";
+export const Navbar = () => {
   return (
     <div>
-      {children}
-      <h3>aca el logo</h3>
-      <ul>
-        <li>Inicio</li>
-        <li>Productos</li>
-        <li>Nosotros</li>
-        <li>Contactos</li>
-      </ul>
-
-      <h3>Aca las cantidades</h3>
-      <IoCartOutline color="peru" size="2rem" />
+      <>
+        <div className="containerNavbar">
+          <li to="/" style={{ color: "beige" }}>
+            Studio A.M.
+          </li>
+          <ul className="categories">
+            <li to="/">Todas</li>
+            <li to="/category/facial">Faciales</li>
+            <li to="/category/corporal">Corporales</li>
+          </ul>
+          <CartWidget />
+        </div>
+      </>
     </div>
   );
 };

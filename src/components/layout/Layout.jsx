@@ -10,5 +10,3 @@ export const Layout = ({ children }) => {
     </div>
   );
 };
-
-export default App;

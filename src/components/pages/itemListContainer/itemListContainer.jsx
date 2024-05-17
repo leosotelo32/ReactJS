@@ -1,34 +1,33 @@
-import { ProductCard } from "../../common/productCard/ProductCard";
+import { useState } from "react";
+import { products } from "../../../productsMock";
+import { useEffect } from "react";
 
-export const ItemListContainer = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        gap: "40px",
-        backgroundColor: "steelblue",
-      }}
-    >
-      <h1>Bienvenidos a mi ecommerce</h1>
+const ItemListContainer = () => {
+  const [items] = useState([]);
 
-      <ProductCard
-        precio={100}
-        titulo={"Titulo 1"}
-        descripcion={"descripcion 1"}
-      />
+  useEffect(() => {
+    const getProducts = new Promise((resolve, reject) => {
+      let x = true;
 
-      <ProductCard
-        precio={200}
-        titulo={"Titulo 2"}
-        descripcion={"descripcion 2"}
-      />
+      if (x) {
+        setTimeout(() => {
+          resolve(products);
+        }, 2000);
+      } else {
+        reject({ status: 400, message: "Algo salio mal" });
+      }
+    });
 
-      <ProductCard
-        precio={300}
-        titulo={"Titulo 2"}
-        descripcion={"descripcion 2"}
-      />
-    </div>
-  );
+    getProducts
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  return <ItemList items={items} />;
 };
+
+export default ItemListContainer;
