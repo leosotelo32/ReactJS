@@ -3,7 +3,7 @@ header {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
-  background-color: rgb(250, 212, 244);
+  background-color: rgb(255, 255, 255);
   padding: 10px 50px 2px 40px;
 }
 
@@ -18,4 +18,9 @@ li {
   display: inline-block;
   margin: 10px;
   cursor: pointer;
+  color: black;
+}
+
+ul {
+  color: black;
 }

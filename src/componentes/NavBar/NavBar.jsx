@@ -1,21 +1,32 @@
 import React from "react";
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link, NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <header>
-      <img className="ImgHeader" src="../img/logov5.png" alt="hola" />
-      <h1>Tienda A.M</h1>
+      <Link to="/">
+        <img className="ImgHeader" src="../img/logov5.png" alt="hola" />
+      </Link>
       <nav>
         <ul>
-          <li>Pestañas</li>
-          <li>Cejas</li>
-          <li>Depi</li>
-          <li>HIFU</li>
+          <li>
+            <Link to="/"> Home </Link>
+          </li>
+          <li>
+            <NavLink to="categoria/Faciales"> Faciales </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="categoria/Corporales">SKIN</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="categoria/Aparatos">Corporales</NavLink>
+          </li>
         </ul>
       </nav>
-
       <CartWidget />
     </header>
   );

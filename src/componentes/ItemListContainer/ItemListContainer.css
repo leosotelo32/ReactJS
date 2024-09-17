@@ -1,4 +1,10 @@
 div {
-  background-color: rgb(218, 160, 191);
+  background-color: rgb(255, 255, 255);
   margin: 50px;
+}
+
+contenedorProductos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
