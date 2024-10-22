@@ -1,10 +1,5 @@
-//Este componente va a recibir los custom hooks creados
-// 1) importamos el useContador
-
 import { useContador } from "../custom-hooks/useContador";
 import React from "react";
-
-//importamos el FETCH
 
 import { useFetch } from "../custom-hooks/useFetch";
 

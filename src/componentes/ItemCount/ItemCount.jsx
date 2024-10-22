@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
-const ItemCount = ({ stock }) => {
-  const [contador, setContador] = useState(0);
+const ItemCount = ({ inicial, stock, funcionAgregar }) => {
+  const [contador, setContador] = useState(inicial);
 
   const incrementar = () => {
     if (contador < stock) {
@@ -11,16 +11,22 @@ const ItemCount = ({ stock }) => {
   };
 
   const decrementar = () => {
-    if (contador > 1) {
+    if (contador > inicial) {
       setContador(contador - 1);
     }
   };
   return (
-    <div>
-      <button onClick={incrementar}> + </button>
-      <p> {contador}</p>
-      <button onClick={decrementar}> - </button>
-    </div>
+    <>
+      <div>
+        <button onClick={incrementar}> + </button>
+        <p> {contador}</p>
+        <button onClick={decrementar}> - </button>
+      </div>
+
+      <button onClick={() => funcionAgregar(contador)}>
+        Agregar al carrito
+      </button>
+    </>
   );
 };
 

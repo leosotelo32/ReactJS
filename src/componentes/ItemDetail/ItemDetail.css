@@ -4,6 +4,11 @@
   margin: 4rem;
 }
 
+p {
+  font-size: large;
+  font-weight: 400;
+}
+
 img {
-  width: 20vw;
+  width: 22vw;
 }

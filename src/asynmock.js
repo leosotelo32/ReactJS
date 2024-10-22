@@ -1,39 +1,46 @@
-const misProductos = [
+/* const misProductos = [
   {
     id: "1",
-    nombre: "Pestañas",
-    precio: 500,
+    nombre: "Pestañas pelo por pelo",
+    stock: 10,
+    precio: 15000,
     img: "../img/PXP.jpg",
     idCat: "Faciales",
+    descripcion: "Realza tu mirada con un efecto natural y duradero.",
   },
   {
     id: "2",
     nombre: "HIFU 7D",
-    precio: 200,
+    stock: 10,
+    precio: 30000,
     img: "../img/hifu7d.jpg",
     idCat: "Corporales",
   },
   {
     id: "3",
-    nombre: "DEPI",
-    precio: 300,
+    nombre: "Depilación Láser",
+    stock: 10,
+    precio: 45000,
     img: "../img/depi-laser.jpg",
     idCat: "Aparatos",
+    descripcion:
+      "Depilación láser: Experimenta la suavidad duradera con nuestra tecnología láser de última generación.",
   },
   {
     id: "4",
     nombre: "Cejas",
-    precio: 1000,
+    stock: 10,
+    precio: 10000,
     img: "../img/cejas.jpg",
     idCat: "Faciales",
   },
 ];
-
+*/
 export const getProductos = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(misProductos);
-    }, 100);
+    }, 2000);
   });
 };
 

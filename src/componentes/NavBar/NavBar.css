@@ -18,9 +18,11 @@ li {
   display: inline-block;
   margin: 10px;
   cursor: pointer;
-  color: black;
 }
 
-ul {
-  color: black;
+nav ul li a {
+  color: #404142;
+  font-family: system-ui;
+  font-size: larger;
+  font-weight: 600;
 }
