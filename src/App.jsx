@@ -1,17 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from "react";
+import React, { Children } from "react";
 import "./App.css";
 import NavBar from "./componentes/NavBar/NavBar";
 import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer";
-import { CarritoProvider } from "./context/CartContext";
-import Productos from "./componentes/Productos.jsx";
+import { CartContext } from "./context/CartContext";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
-        <CarritoProvider>
+        <CartContext.Provider value={Children}>
           <NavBar />
           <Routes>
             <Route
@@ -25,7 +24,7 @@ const App = () => {
             <Route path="/item/:idItem" element={<ItemDetailContainer />} />
             <Route path="*" element={<h2>Sitio en construccion</h2>} />
           </Routes>
-        </CarritoProvider>
+        </CartContext.Provider>
       </BrowserRouter>
     </>
   );

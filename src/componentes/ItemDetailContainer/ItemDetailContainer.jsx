@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-/*import { getUnProducto } from "../../asynmock";*/
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../services/config";
